@@ -17,21 +17,27 @@
                     </div>
                     <div class="card-body">
                         <form>
-                            <div class="mb-3">
-                                <label for="exampleInputText1" class="form-label">Nombre Alumno</label>
-                                <input type="text" class="form-control bg-darkBG text-white" id="exampleInput">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Correo Institucional</label>
-                                <input type="email" class="form-control bg-darkBG text-white" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputText1" class="form-label">URL Archivo</label>
-                                <input type="text" class="form-control bg-darkBG text-white" id="exampleInput">
-                            </div>
-                            <div class="mt-5">
-                                <a href="{{route('Proyectos.proyectos')}}" class="btn btn-primary text-white me-3">Enviar</a>
-                                <a href="{{route('Proyectos.proyectos')}}" class="btn btn-danger text-white ">Cancelar</a>
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <label for="exampleInputText1" class="form-label">Nombre Alumno</label>
+                                    <input type="text" class="form-control bg-darkBG text-white" id="exampleInput">
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="exampleInputText1" class="form-label">Apellido Alumno</label>
+                                    <input type="text" class="form-control bg-darkBG text-white" id="exampleInput">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Correo Institucional</label>
+                                    <input type="email" class="form-control bg-darkBG text-white" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="exampleInputText1" class="form-label">URL Archivo</label>
+                                    <input type="text" class="form-control bg-darkBG text-white" id="exampleInput">
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <a href="{{route('Proyectos.proyectos')}}" class="btn btn-primary text-white me-3">Enviar</a>
+                                    <a href="{{route('Proyectos.proyectos')}}" class="btn btn-danger text-white ">Cancelar</a>
+                                </div>
                             </div>
                 
                         </form>
