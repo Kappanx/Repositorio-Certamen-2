@@ -17,11 +17,11 @@
                         <form>
                             <div class="mb-3">
                                 <label for="exampleInputText1" class="form-label">Correo Institucional</label>
-                                <input type="email" class="form-control" id="exampleInput">
+                                <input type="email" class="form-control bg-darkBG" id="exampleInput">
                             </div>
                              <div class="mb-3">
                                 <label for="exampleInputPassword" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="exampleInput">
+                                <input type="password" class="form-control bg-darkBG" id="exampleInput">
                             </div>
                             <div class="mt-5">
                                 <a href="{{route('Main.home')}}" class="btn btn-primary text-white me-3">Acceder</a>
