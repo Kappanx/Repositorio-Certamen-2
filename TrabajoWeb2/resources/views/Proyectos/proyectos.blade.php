@@ -36,7 +36,7 @@
                         <tr>
                             <th scope="row">1</th>
                             <td>Pablo Fuentes</td>
-                            <td>En revision...<a href="#" class="btn btn-warning text-black mx-4"><span class="material-icons-outlined">border_color</span></a></td>
+                            <td>En revision...<a href="" class="btn btn-warning text-black mx-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons-outlined">border_color</span></a></td>
                             <td class="d-flex justify-content-evenly">
                                 <a href="" class="btn btn-primary text-black"><span class="material-icons-outlined">file_download</span></a>
                                 <a href="{{route('Proyectos.modProyecto')}}" class="btn btn-warning text-black"><span class="material-icons-outlined">border_color</span></a>
@@ -47,7 +47,7 @@
                         <tr>
                             <th scope="row">2</th>
                             <td>Etiam Fuentes</td>
-                            <td>En revision...<a href="#" class="btn btn-warning text-black mx-4"><span class="material-icons-outlined">border_color</span></a></td>
+                            <td>En revision...<a href="#" class="btn btn-warning text-black mx-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons-outlined">border_color</span></a></td>
                             <td class="d-flex justify-content-evenly">
                                 <a href="" class="btn btn-primary text-black"><span class="material-icons-outlined">file_download</span></a>
                                 <a href="{{route('Proyectos.modProyecto')}}" class="btn btn-warning text-black"><span class="material-icons-outlined">border_color</span></a>
@@ -58,7 +58,7 @@
                         <tr>
                             <th scope="row">3</th>
                             <td>Maximiliano Alvarez</td>
-                            <td>En revision...<a href="#" class="btn btn-warning text-black mx-4"><span class="material-icons-outlined">border_color</span></a></td>
+                            <td>En revision...<a href="#" class="btn btn-warning text-black mx-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons-outlined">border_color</span></a></td>
                             <td class="d-flex justify-content-evenly">
                                 <a href="" class="btn btn-primary text-black"><span class="material-icons-outlined">file_download</span></a>
                                 <a href="{{route('Proyectos.modProyecto')}}" class="btn btn-warning text-black"><span class="material-icons-outlined">border_color</span></a>
@@ -74,6 +74,47 @@
 
         </div>
 
+    </div>
+    <!-- Modal-->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-darkBG text-white">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Estado</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            En revision...
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Aceptado
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Modificar
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                        <label class="form-check-label" for="flexRadioDefault4">
+                            Rechazado
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary text-white">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 @endsection
