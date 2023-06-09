@@ -18,19 +18,19 @@
                         <form>
                             <div class="mb-3">
                                 <label for="exampleInputText1" class="form-label">Rut</label>
-                                <input type="text" class="form-control" id="exampleInput">
+                                <input type="text" class="form-control bg-darkBG" id="exampleInput">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputText1" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="exampleInput">
+                                <input type="text" class="form-control bg-darkBG" id="exampleInput">
                             </div>
                              <div class="mb-3">
                                 <label for="exampleInputText1" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="exampleInput">
+                                <input type="text" class="form-control bg-darkBG" id="exampleInput">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputText1" class="form-label">Correo Institucional</label>
-                                <input type="email" class="form-control" id="exampleInput">
+                                <input type="email" class="form-control bg-darkBG" id="exampleInput">
                             </div>
                             <div class="mt-5">
                                 <a href="{{route('Profesores.profesores')}}" class="btn btn-primary text-white me-3">Agregar</a>
