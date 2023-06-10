@@ -7,7 +7,7 @@
 
 @section('content')
 
-    <div class="container-fluid mt-54>
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class=" col-12">
                 <a href="{{route('Profesores.index')}}" ><button class="btn btn-danger d-grid text-white shadow-sm">Volver</button></a>
@@ -38,8 +38,8 @@
                             <td>Pablo Fuentes</td>
                             <td>En revision...</td>
                             <td class="d-flex justify-content-evenly">
-                                <a href="" class="btn btn-primary text-black"><span class="material-icons-outlined">file_download</span></a>
-                                <a href="#" class="btn btn-success text-black"><span class="material-icons-outlined">remove_red_eye</span></a>
+                                <a href="#" class="btn btn-primary text-black"><span class="material-icons-outlined">file_download</span></a>
+                                <a href="#" class="btn btn-success text-black" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons-outlined">remove_red_eye</span></a>
                             </td>
                         </tr>
                         
@@ -63,7 +63,8 @@
                     <textarea class="form-control bg-darkBG text-white" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary text-white">Guardar</button>
                 </div>
             </div>
         </div>
