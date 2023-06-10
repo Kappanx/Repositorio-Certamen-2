@@ -29,22 +29,36 @@
                 <table class="table table-striped table-hover table-bordered rounded rounded-3 overflow-hidden shadow">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">Nº</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Estado Archivo</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">URL Documento</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Rut</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody class="table-dark">
+                        @foreach ($propuestas as $num=>$propuesta)
+
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Pablo Fuentes</td>
-                            <td>En revision...</td>
+                            <td class="align-text-middle">{{$propuesta->id}}</td>
+                            <td class="align-text-middle">{{$propuesta->fecha}}</td>
+                            <td class="align-text-middle">{{$propuesta->documento}}</td>
+                            <td class="align-text-middle">
+                            @if($propuesta->estado === 0)Esperando revision 
+                            @elseif($propuesta->estado === 1)Modificar 
+                            @elseif($propuesta->estado === 2)Rechazado 
+                            @elseif($propuesta->estado === 4)Aceptado 
+                            @else * @endif
+                            </td>
+                            <td class="align-text-middle">{{$propuesta->estudiante_rut}}</td>
                             <td class="d-flex justify-content-evenly">
-                                <a href="" class="btn btn-primary text-black"><span class="material-icons-outlined">file_download</span></a>
-                                <a href="{{route('Alumnos.modProyecto')}}" class="btn btn-warning text-black"><span class="material-icons-outlined">border_color</span></a>
+                                <a href="#" class="btn btn-primary text-black"><span class="material-icons-outlined">file_download</span></a>
+                                <a href="#" class="btn btn-success text-black" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-icons-outlined">remove_red_eye</span></a>
+                            </td>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

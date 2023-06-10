@@ -34,12 +34,15 @@
                         </tr>
                     </thead>
                     <tbody class="table-dark">
+                        @foreach ($estudiantes as $num=>$estudiante)
+
                         <tr>
-                            <th scope="row">1</th>
-                            <td>01.234.567-8</td>
-                            <td>Pablo Enrique Fuentes</td>
-                            <td>pablo.fuentes@usm.cl</td>
+                            <th scope="row">{{$num+1}}</th>
+                            <td class="align-text-middle">{{$estudiante->rut}}</td>
+                            <td class="align-text-middle">{{$estudiante->nombre}} {{$estudiante->apellido}}</td>
+                            <td class="align-text-middle">{{$estudiante->email}}</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -50,25 +53,26 @@
                         <h4>Agregar Nuevo Alumno</h4>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="{{route('Admin.store')}}">
+                            @csrf
                             <div class="mb-3">
-                                <label for="exampleInputText1" class="form-label">Rut</label>
-                                <input type="text" class="form-control bg-darkBG text-light" id="exampleInput">
+                                <label for="rut" class="form-label">Rut</label>
+                                <input type="text" class="form-control bg-darkBG text-light" id="rut" name="rut" value="{{old('rut')}}">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputText1" class="form-label">Nombre</label>
-                                <input type="text" class="form-control bg-darkBG text-light" id="exampleInput">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control bg-darkBG text-light" id="nombre" name="nombre" value="{{old('nombre')}}">
                             </div>
                              <div class="mb-3">
-                                <label for="exampleInputText1" class="form-label">Apellido</label>
-                                <input type="text" class="form-control bg-darkBG text-light" id="exampleInput">
+                                <label for="apellido" class="form-label">Apellido</label>
+                                <input type="text" class="form-control bg-darkBG text-light" id="apellido" name="apellido" value="{{old('apellido')}}">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputText1" class="form-label">Correo Institucional</label>
-                                <input type="email" class="form-control bg-darkBG text-light" id="exampleInput">
+                                <label for="email" class="form-label">Correo Institucional</label>
+                                <input type="email" class="form-control bg-darkBG text-light" id="email" name="email" value="{{old('email')}}">
                             </div>
                             <div class="mt-4">
-                                <a href="#" class="btn btn-primary text-white me-3">Agregar</a>
+                                <button type="submit" class="btn btn-primary text-white me-3">Agregar</button>
                             </div>
                 
                         </form>

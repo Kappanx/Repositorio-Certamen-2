@@ -28,18 +28,21 @@
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">Nº</th>
-                            <th scope="col">Rut</th>
+                            <th scope="col">ID</th>
                             <th scope="col">Nombre Completo</th>
                             <th scope="col">Correo Institucional</th>
                         </tr>
                     </thead>
                     <tbody class="table-dark">
+                        @foreach ($profesores as $num=>$profesor)
+
                         <tr>
-                            <th scope="row">1</th>
-                            <td>01.234.567-8</td>
-                            <td>Pablo Enrique Fuentes</td>
-                            <td>pablo.fuentes@usm.cl</td>
+                            <th scope="row">{{$num+1}}</th>
+                            <td class="align-text-middle">{{$profesor->id}}</td>
+                            <td class="align-text-middle">{{$profesor->nombre}} {{$profesor->apellido}}</td>
+                            <td class="align-text-middle">{{$profesor->email}}</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
