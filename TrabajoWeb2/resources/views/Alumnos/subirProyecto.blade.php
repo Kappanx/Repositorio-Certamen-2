@@ -35,8 +35,8 @@
                                     <input type="text" class="form-control bg-darkBG text-white" id="exampleInput">
                                 </div>
                                 <div class="col-12 mt-4">
-                                    <a href="{{route('Proyectos.proyectos')}}" class="btn btn-primary text-white me-3">Enviar</a>
-                                    <a href="{{route('Proyectos.proyectos')}}" class="btn btn-danger text-white ">Cancelar</a>
+                                    <a href="{{route('Alumnos.proyectos')}}" class="btn btn-primary text-white me-3">Enviar</a>
+                                    <a href="{{route('Alumnos.proyectos')}}" class="btn btn-danger text-white ">Cancelar</a>
                                 </div>
                             </div>
                 

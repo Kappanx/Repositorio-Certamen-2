@@ -7,15 +7,15 @@
 
 @section('content')
 
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-4">
         <div class="row">
-            <div class="col-lg-10 col-12">
-                <h3 class="text-white">Profesores</h3>
-            </div>
-            <div class="col-lg-2 col-12">
-                <a href="{{route('Profesores.agregarProfesor')}}" ><button class="btn btn-primary d-grid text-white shadow-sm">Añadir Nuevo Profesor</button></a>
-            </div>   
-             
+            <div class=" col-12">
+                <a href="{{route('Admin.index')}}" ><button class="btn btn-danger d-grid text-white shadow-sm">Volver</button></a>
+            </div> 
+            <div class="d-flex col-12 mt-3 justify-content-between">
+                <h3 class="text-white">Equipo de profesores</h3>
+                <a href="{{route('Admin.agregarProfesor')}}" ><button class="btn btn-primary d-grid text-white shadow-sm">Agregar profesor</button></a>
+            </div> 
         </div>
         
 
@@ -40,26 +40,9 @@
                             <td>Pablo Enrique Fuentes</td>
                             <td>pablo.fuentes@usm.cl</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>20.525.179-0</td>
-                            <td>Etiam Nicolas Fuentes</td>
-                            <td>etiam.fuentes@usm.cl</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>20.475.544-2</td>
-                            <td>Maximiliano Andres Cris. Alvarez</td>
-                            <td>maximiliano.alvarez@sansano.usm.cl</td>
-                        </tr>
-                        
                     </tbody>
                 </table>
             </div>
-
-
         </div>
-
     </div>
-
 @endsection

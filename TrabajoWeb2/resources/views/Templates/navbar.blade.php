@@ -25,7 +25,7 @@
         <!-- NavBar -->
         <nav class="navbar navbar-expand-lg bg-darkBG navbar-dark shadow">
         <div class="container-xl">
-            <a class="navbar-brand" href="#"><img src="{{ asset('imgs/LogoUSM white.png') }}" alt="" width="100"></a>
+            <a class="navbar-brand" href="{{route('Main.home')}}"><img src="{{ asset('imgs/LogoUSM white.png') }}" alt="" width="100"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,15 +36,15 @@
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="{{route('Proyectos.proyectos')}}">Proyectos</a>
+                <a class="nav-link" href="{{route('Alumnos.index')}}">Alumno</a>
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="{{route('Alumnos.alumnos')}}">Alumnos</a>
+                <a class="nav-link" href="{{route('Profesores.index')}}">Profesor</a>
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="{{route('Profesores.profesores')}}">Profesores</a>
+                <a class="nav-link" href="{{route('Admin.index')}}">Administrador</a>
                 </li>
 
             </ul>

@@ -17,7 +17,7 @@
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-darkBG mb-5 shadow">
             <div class="container-xl">
-                <a class="navbar-brand" href="#"><img src="{{ asset('imgs/LogoUSM white.png') }}" alt="" width="100"></a>
+                <a class="navbar-brand" href="{{route('Main.home')}}"><img src="{{ asset('imgs/LogoUSM white.png') }}" alt="" width="100"></a>
                 <a href="{{route('Main.login')}}"><button class="btn btn-outline-light" type="submit">Iniciar Sesion</button></a>
             </div>
         </nav>
@@ -40,9 +40,9 @@
                     <div class="card bg-dark text-white shadow text-center">
                         <img src="{{ asset('imgs/foto-stock1.jpg') }}" class="card-img-top" alt="...">
                         <div class="card-body ">
-                            <h5 class="card-title">Vista alumnos</h5>
+                            <h5 class="card-title">Popuestas de proyectos</h5>
                             <p class="card-text"></p>
-                            <a href="{{route('Alumnos.index')}}" class="btn btn-primary d-grid text-white">Acceder</a>
+                            <a href="{{route('Admin.proyectos')}}" class="btn btn-primary d-grid text-white">Revisar propuestas</a>
                             
                         </div>
                     </div>
@@ -52,9 +52,9 @@
                     <div class="card bg-dark text-white shadow text-center">
                         <img src="{{ asset('imgs/foto-stock1.jpg') }}" class="card-img-top" alt="...">
                         <div class="card-body ">
-                            <h5 class="card-title">Vista profesor</h5>
+                            <h5 class="card-title">Alumnos inscritos</h5>
                             <p class="card-text"></p>
-                            <a href="{{route('Profesores.index')}}" class="btn btn-primary d-grid text-white">Acceder</a>
+                            <a href="{{route('Admin.alumnos')}}" class="btn btn-primary d-grid text-white">Revisar alumnos inscritos</a>
                         </div>
                     </div>
                 </div>
@@ -63,9 +63,10 @@
                     <div class="card bg-dark text-white shadow text-center">
                         <img src="{{ asset('imgs/foto-stock1.jpg') }}" class="card-img-top" alt="...">
                         <div class="card-body ">
-                            <h5 class="card-title">Vista admin</h5>
+                            <h5 class="card-title">Equipo de profesores</h5>
                             <p class="card-text"></p>
-                            <a href="{{route('Admin.index')}}" class="btn btn-primary d-grid text-white">Acceder</a>
+                            <a href="{{route('Admin.profesores')}}" class="btn btn-primary d-grid text-white">Revisar equipo de profesores</a>
+                            <a href="{{route('Admin.agregarProfesor')}}" class="btn btn-success d-grid text-white mt-3">Agregar un profesor</a>
                         </div>
                     </div>
                 </div>

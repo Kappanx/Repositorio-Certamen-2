@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AlumnosController;
 use App\Http\Controllers\ProfesoresController;
-use App\Http\Controllers\ProyectosController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +20,16 @@ use App\Http\Controllers\ProyectosController;
 Route::get('/',[HomeController::class,'home'])->name('Main.home');
 Route::get('/login',[HomeController::class,'login'])->name('Main.login');
 
-Route::get('/alumnos',[AlumnosController::class,'index'])->name('Alumnos.alumnos');
-Route::get('/alumnos/agregar',[AlumnosController::class,'add'])->name('Alumnos.agregarAlumno');
+Route::get('/alumnos',[AlumnosController::class,'index'])->name('Alumnos.index');
+Route::get('/alumnos/proyectos',[AlumnosController::class,'proyectos'])->name('Alumnos.proyectos');
+Route::get('/alumnos/proyrctos/subir',[AlumnosController::class,'add'])->name('Alumnos.subirProyecto');
+Route::get('/alumnos/proyectos/modificar',[AlumnosController::class,'mod'])->name('Alumnos.modProyecto');
 
-Route::get('/profesores',[ProfesoresController::class,'index'])->name('Profesores.profesores');
-Route::get('/profesores/agregar',[ProfesoresController::class,'add'])->name('Profesores.agregarProfesor');
+Route::get('/profesores',[ProfesoresController::class,'index'])->name('Profesores.index');
+Route::get('/profesores/proyectos',[ProfesoresController::class,'proyectos'])->name('Profesores.proyectos');
 
-Route::get('/proyectos',[ProyectosController::class,'index'])->name('Proyectos.proyectos');
-Route::get('/proyectos/modificar',[ProyectosController::class,'add'])->name('Proyectos.subirProyecto');
-Route::get('/proyectos/subir',[ProyectosController::class,'edit'])->name('Proyectos.modProyecto');
+Route::get('/admin',[AdminController::class,'index'])->name('Admin.index');
+Route::get('/admin/alumnos',[AdminController::class,'alumnos'])->name('Admin.alumnos');
+Route::get('/admin/profesores',[AdminController::class,'profesores'])->name('Admin.profesores');
+Route::get('/admin/profesores/añadir',[AdminController::class,'addProfe'])->name('Admin.agregarProfesor');
+Route::get('/admin/proyectos',[AdminController::class,'proyectos'])->name('Admin.proyectos');

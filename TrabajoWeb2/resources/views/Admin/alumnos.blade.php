@@ -7,12 +7,16 @@
 
 @section('content')
 
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-4">
         <div class="row">
-            <div class="col-lg-12 col-12">
-                <h3 class="text-white">Alumnos</h3>
+            <div class=" col-12">
+                <a href="{{route('Admin.index')}}" ><button class="btn btn-danger d-grid text-white shadow-sm">Volver</button></a>
+            </div> 
+            <div class="col-12 mt-3">
+                <h3 class="text-white">Alumnos Inscritos</h3>
             </div> 
         </div>
+        
         
 
         <!-- tablas -->
@@ -35,18 +39,6 @@
                             <td>01.234.567-8</td>
                             <td>Pablo Enrique Fuentes</td>
                             <td>pablo.fuentes@usm.cl</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>20.525.179-0</td>
-                            <td>Etiam Nicolas Fuentes</td>
-                            <td>etiam.fuentes@usm.cl</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>20.475.544-2</td>
-                            <td>Maximiliano Andres Cris. Alvarez</td>
-                            <td>maximiliano.alvarez@sansano.usm.cl</td>
                         </tr>
                     </tbody>
                 </table>
@@ -76,8 +68,7 @@
                                 <input type="email" class="form-control bg-darkBG text-light" id="exampleInput">
                             </div>
                             <div class="mt-4">
-                                <a href="{{route('Alumnos.alumnos')}}" class="btn btn-primary text-white me-3">Agregar</a>
-                                <a href="{{route('Alumnos.alumnos')}}" class="btn btn-danger text-white ">Cancelar</a>
+                                <a href="#" class="btn btn-primary text-white me-3">Agregar</a>
                             </div>
                 
                         </form>

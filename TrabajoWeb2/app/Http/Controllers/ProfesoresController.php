@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class ProfesoresController extends Controller
 {
     public function index(){
-        return view('Profesores.profesores');
+        return view('Profesores.index');
     }
 
-    public function add(){
-        return view('Profesores.agregarProfesor');
+    public function proyectos(){
+        return view('Profesores.proyectos');
     }
 }
